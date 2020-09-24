@@ -1,0 +1,694 @@
+//Colores
+$Verde: #23d429
+$Azul: #239fff
+$Blanco: #ffffff
+$BlancoSmoke: #eeeeee
+$Gris: #b6b6b6
+$Negro: #121212
+//Fuentes
+@font-face 
+    font-family: "Titulos" 
+    src: url("../fonts/PoetsenOne-Regular.ttf")
+@font-face 
+    font-family: "Texto" 
+    src: url("../fonts/Dosis-VariableFont_wght.ttf")
+$fonttit: "Titulos"
+$fonttext: "Texto"
+//Tamaños
+$sizeTitle: 45px
+$sizeTitleMov: 25px
+$sizeText: 20px
+$sizeTextMove: 14px
+//Configuraciones Documento
+html
+    scroll-behavior: smooth
+    -o-scroll-behavior: smooth
+    overflow-x: hidden
+*
+    margin: 0
+    padding: 0
+    -moz-box-sizing: border-box
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+//Centrar Contenido
+.container
+    max-width: 1140px
+    margin: auto
+//scroll menu
+
+.espacio
+    height: 0px
+//Config Body
+body
+    overflow-x: hidden
+    &::-webkit-scrollbar
+        width: 10px
+        
+        background: #ffffff
+    &::-webkit-scrollbar-thumb
+        background: #4b4b4b83
+        border-radius: 20px
+.conarr
+    width: 100%
+    position: fixed
+    top: 0
+    z-index: 1000
+.cab
+    background-color: $Verde
+    color: $Blanco
+    z-index: 99
+    width: 100%
+    padding: 5px 50px
+    display: flex
+    position: relative
+    justify-content: space-between
+    align-items: center
+    .email
+        display: flex
+        justify-content: space-around
+        align-items: center
+        width: 50%
+        .correo
+            display: flex
+            align-items: center
+        .horario
+            display: flex
+            align-items: center
+        p
+            font-family: $fonttext
+            font-size: 18px
+        i
+            font-size: 20px
+    .redes
+        a
+            font-size: 20px
+            text-decoration: none
+            color: $Blanco
+            padding: 0px 10px
+// menu de navegacion
+nav
+    background-color: $BlancoSmoke
+    z-index: 1000
+    position: relative
+    top: 20
+    left: 0
+    width: 100%
+    padding: 10px 50px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    #logoimg
+        width: 80px
+        transition: 300ms
+        margin-left: 50px   
+    span
+        transition: 300MS
+        i
+            position: absolute
+            right: 0
+            top: 20px
+            color: #121212a9
+            font-size: 40px
+            padding: 10px
+            &:hover
+                cursor: pointer
+    ul
+        width: 0
+        height: 85px
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        align-items: center
+        list-style: none
+        background: $BlancoSmoke    
+        overflow: hidden
+        transition: 300ms
+        li
+            .active
+                color: $Verde
+                border-bottom: $Verde 2px solid
+                text-decoration: none!important
+            a
+                text-decoration: none
+                color: $Negro
+                font-family: $fonttext
+                font-size: 18px
+                &:hover
+                    text-decoration: underline
+//header
+header
+    background-image: linear-gradient(180deg, #000000a2 100%, #0c0c0c90 100%),  url("../medios/cabeceras/header.jpg")
+    background-size: cover
+    padding-top: 150px
+    background-position: center
+    width: 100%
+    .text-hero 
+        text-align: center
+        padding-top: 50px
+        h2
+            font-family: $fonttit
+            font-size: 80px
+            color: #09ff2a
+            margin-bottom: 15px
+        h3
+            font-family: $fonttit
+            font-size: 35px
+            color: $Blanco
+            font-weight: lighter
+            margin-bottom: 55px
+        button
+            font-family: $fonttit
+            font-size: 25px
+            text-decoration: none
+            color: $Blanco
+            background: transparent
+            cursor: pointer
+            border: solid 2px $Blanco   
+            border-radius: 50px     
+            padding: 10px 20px
+            transition: .4s
+            margin-bottom: 50px
+            &:hover
+                border: solid 2px $Verde  
+                background-color: $Blanco 
+                color: $Verde
+//acercade
+.acercade
+    background-color: $Blanco
+    padding: 25px
+    width: 100%
+    .acerca
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .textoac
+            width: 60%
+            h2
+                font-family: $fonttit
+                font-size: $sizeTitle
+                color: $Verde
+                span
+                    color: $Azul
+                    padding-left: 50px
+            p
+                padding-left: 50px
+                text-align: justify
+                font-family: $fonttext
+                font-size: $sizeText
+        .imgac    
+            width: 30%
+            img
+                width: 100%
+//team
+.team
+    width: 100%
+    background-color: #eeeeee
+    padding: 25px 0px
+    .container
+        p
+            text-align: center
+            font-family: $fonttext
+            font-size: $sizeText
+            a
+                text-decoration: none
+                color: $Azul
+        h2
+            padding: 35px 0px
+            font-family: $fonttit
+            font-size: $sizeTitle
+            text-align: center
+            color: $Azul
+            margin-bottom: 25px
+            span
+                color: $Verde
+        .nteam
+            display: flex
+            justify-content: space-around
+            align-content: center
+            flex-wrap: wrap
+            margin-bottom: 25px
+            .fabian
+                border: $Azul 10px solid!important
+                a
+                    &:hover
+                        color: $Azul!important
+                span
+                    a
+                        &:hover
+                            background-color: $Azul!important
+                            color: $Blanco!important
+            .miembro
+                width: 30%
+                text-align: center
+                padding: 20px 10px
+                font-family: $fonttext
+                background-color: $Blanco
+                background-size: cover
+                border: $Verde 10px solid
+                color: #000000
+                img
+                    width: 50%
+                    border-radius: 100%
+                    border: 4px solid #b6b6b6
+                h3
+                    font-size: 35px
+                    font-weight: 500
+                    color:white
+                p
+                    font-size: $sizeText
+                    margin: 15px 0px
+                span
+                    a
+                        text-decoration: none
+                        font-size: $sizeText
+                        background-color: #dfdfdf
+                        border-radius: 50px
+                        padding: 5px 15px
+                        color: $Negro
+                        transition: .4s
+                        &:hover
+                            background-color: $Verde
+                            color: $Blanco
+                a
+                    font-size: 25px
+                    padding: 0px 20px
+                    color: $Negro
+                    &:hover
+                        color: $Verde
+//politicas
+.politicas
+    width: 100%
+    background-color: #dddddd
+    padding: 25px 0px
+    .container
+        p
+            text-align: center
+            font-family: $fonttext
+            font-size: $sizeText
+            a
+                text-decoration: none
+                color: $Azul
+        h2
+            padding: 35px 0px
+            font-family: $fonttit
+            font-size: $sizeTitle
+            text-align: center
+            color: $Azul
+            margin-bottom: 25px
+            span
+                color: $Verde
+        .politic
+            width: 90%
+            margin: auto
+            margin-bottom: 20px
+            .galpamb
+                width: 100%
+                .slick-prev
+                    left: -45px
+                .slick-prev::before, .slick-next::before
+                    font-size: 35px
+                    opacity: 0.5
+                    color: black
+
+                .politica
+                    position: relative
+                    img
+                        width: 100%
+                        filter: brightness(0.6)
+                    p
+                        position: absolute
+                        bottom: 20px
+                        width: 100%
+                        text-align: center
+                        font-weight: 500
+                        color: $Blanco
+                        font-family: $fonttext
+                        font-size: 25px
+//anuncio
+.app
+    background-color: $Blanco
+    padding: 25px 0px
+    .container
+        h2
+            padding: 35px 0px
+            font-family: $fonttit
+            font-size: $sizeTitle
+            text-align: center
+            color: $Verde
+            margin-bottom: 25px
+            span
+                color: $Azul
+        .anuncio
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            padding: 0px 25px
+            .video
+                width: 70%
+                iframe
+                    width: 100%
+                    height: 100%
+            .descarga
+                width: 25%
+                margin: auto
+                padding: 35px
+                display: flex
+                flex-direction: column
+                justify-items: center
+                align-items: center
+                a
+                    width: 100%
+                    img
+                        width: 100%
+                img
+                    width: 100%
+//footer
+footer
+    background-color: $BlancoSmoke
+    width: 100%
+    padding: 25px 0px 0px 0px
+    .container
+        .foot
+            display: flex
+            flex-direction: column
+            align-items: center
+            button:hover img
+                filter: brightness(0.5)
+            button:hover p
+                display: block
+            button
+                background: none
+                border: none
+                cursor: pointer
+                width: 15%
+                position: relative
+                img
+                    width: 100%
+                p
+                    position: absolute
+                    top: 30%
+                    color: $Blanco
+                    right: 20%
+                    display: none
+                    font-size: 20px
+            p
+                font-size: $sizeText
+                margin: 20px 0px
+                color: $Negro
+                font-family: $fonttext
+            a
+                font-size: 25px
+                text-decoration: none
+                padding: 0px 10px
+                color: $Negro
+                &:hover
+                    color: $Verde
+    .copy
+        text-align: center
+        width: 100%
+        background-color: #cacaca
+        font-size: $sizeText
+        font-family: $fonttext
+        color: $Negro
+        margin-top: 25px
+        padding: 15px
+
+//responsive ipad pro
+
+@media screen and (max-width:1025px)
+    .cab
+        padding: 5px 20px
+        .email
+            width: 80%
+            p
+                font-size: 18px
+            i
+                font-size: 20px
+        .redes
+            a
+                font-size: 20px
+                padding: 0px 10px
+    nav
+        padding: 10px 20px
+        flex-direction: row
+        justify-content: space-between
+        #logoimg
+            width: 80px
+            margin-left: 0px
+
+
+
+
+
+//responsive ipad
+@media screen and (max-width:769px)
+    //cabecera
+    .cab
+        padding: 5px 0px
+        .email
+            width: 80%
+            flex-wrap: wrap
+            p
+                font-size: 18px
+            i
+                font-size: 20px
+        .redes
+            a
+                font-size: 20px
+                padding: 0px 5px
+    //menu nav
+    nav
+        #logoimg
+            width: 70px
+        span
+            i
+                &:hover
+                    cursor: pointer
+        ul
+            height: 70px
+            padding-top: 10px
+            flex-direction: row
+            justify-content: space-between
+    .team
+        .container
+            .nteam
+                display: flex
+                justify-content: space-around
+                align-content: center
+                flex-wrap: wrap
+                .miembro
+                    width: 40%
+                    margin-bottom: 15px
+    //galeria
+    .politicas
+        .container
+            .politic
+                width: 100%
+                margin: auto
+                margin-bottom: 20px
+                .galpamb
+                    width: 100%
+                    .slick-prev, .slick-next
+                        display: none
+                    .slick-prev::before, .slick-next::before
+                        display: none
+
+
+
+
+
+
+//responsive movil
+@media screen and (max-width:500px )
+
+    //cabecera
+    .cab
+        flex-wrap: wrap
+        .email
+            width: 100%
+            text-align: center
+            .correo
+                flex-wrap: wrap
+            .horario
+                text-align: center
+                flex-wrap: wrap
+            p
+                font-size: 13px
+            .i
+                font-size: 18px
+        .redes
+            width: 100% 
+            text-align: center
+            a
+                font-size: 18px
+                padding: 0px 5px
+    //menu
+    #header
+        padding: 70px 0px!important
+    .sticky
+        position: fixed
+        background: none
+        top: 0
+    nav
+        background-color: #ffffff00
+        top: 20
+        left: 0
+        height: 70px
+        width: 100%
+        position: fixed
+        padding: 10px 50px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        #logoimg
+            display: none
+        span
+            i
+                position: absolute
+                right: 0
+                background-color: #eeeeee5e
+                top: 0px
+                color: #121212a9
+                font-size: 30px
+                padding: 10px
+                &:hover
+                    cursor: pointer
+        ul
+            height: 80vh
+            padding-top: 10px
+            flex-direction: column
+            justify-content: space-between
+    //header
+    header
+        padding-top: 100px
+        .text-hero 
+            h2
+                font-size: 40px
+            h3
+                font-size: 20px
+            button
+                font-size: 20px
+                &:hover
+                    border: solid 2px $Verde  
+                    background-color: $Blanco 
+                    color: $Verde
+    //Acerca De
+    .acercade
+        padding: 10px
+        .acerca
+            .textoac
+                width: 100%
+                h2
+                    font-size: $sizeTitleMov
+                    color: $Verde
+                    text-align: center
+                    span
+                        padding-left: 0px
+                p
+                    padding-left: 0px
+                    text-align: center
+                    font-size: $sizeTextMove
+            .imgac    
+                width: 0%
+                img
+                    display: none
+    //team
+    .team
+        .container
+            p
+                font-size: $sizeTextMove
+            h2
+                font-size: $sizeTitleMov
+            .nteam
+                margin-bottom: 5px
+                .fabian
+                    border: $Azul 5px solid!important
+                .miembro
+                    width: 70%
+                    border: $Verde 5px solid
+                    img
+                        width: 40%
+                        border-radius: 100%
+                        border: 4px solid #b6b6b6
+                    h3
+                        font-size: 20px
+                        font-weight: 500
+                        color:white
+                    p
+                        font-size: $sizeTextMove
+                        margin: 15px 0px
+                    span
+                        a
+                            text-decoration: none
+                            font-size: $sizeTextMove
+                            background-color: #dfdfdf
+                            border-radius: 50px
+                            padding: 5px 15px
+                            color: $Negro
+                            transition: .4s
+                    a
+                        font-size: $sizeTextMove
+                        padding: 0px 20px
+                        color: $Negro
+                        &:hover
+                            color: $Verde
+    //politicas
+    .politicas
+        .container
+            p
+                font-size: $sizeTextMove
+            h2
+                font-size: $sizeTitleMov
+                margin-bottom: 15px
+            .politic
+                width: 100%
+                margin: auto
+                margin-bottom: 20px
+                .galpamb
+                    .slick-prev, .slick-next
+                        display: none
+                    .slick-prev::before, .slick-next::before
+                        display: none
+                    .politica
+                        p
+                            font-size: 15px
+    //anuncio
+    .app
+        .container
+            h2
+                font-size: $sizeTitleMov
+            .anuncio
+                flex-direction: column
+                .video
+                    width: 100%
+                    iframe
+                        height: 200px
+                .descarga
+                    width: 100%
+                    padding: 15px
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    a
+                        width: 50%
+                        img
+                            width: 100%
+                            display: block!important
+                    img
+                        display: none
+    //footer
+    footer
+        .container
+            .foot
+                button
+                    width: 30%
+                    p
+                        top: 25%
+                        right: 15%
+                        font-size: 15px
+                p
+                    font-size: $sizeTextMove
+                a
+                    font-size: 20px
+        .copy
+            font-size: $sizeTextMove

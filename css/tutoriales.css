@@ -1,0 +1,545 @@
+@font-face {
+  font-family: "Titulos";
+  src: url("../fonts/PoetsenOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Texto";
+  src: url("../fonts/Dosis-VariableFont_wght.ttf");
+}
+
+html {
+  scroll-behavior: smooth;
+  -o-scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.sticky {
+  position: fixed;
+  background-color: #eeeeee !important;
+  top: 0;
+}
+
+.sticky2 {
+  position: fixed;
+  background-color: #ffffff00;
+  top: 0;
+}
+
+.espacio {
+  height: 0px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background: #ffffff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #4b4b4b83;
+  border-radius: 20px;
+}
+
+.conarr {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.cab {
+  background-color: #23d429;
+  color: #ffffff;
+  z-index: 99;
+  padding: 5px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cab .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+.cab .email .correo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cab .email .horario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cab .email p {
+  font-family: "Texto";
+  font-size: 18px;
+}
+
+.cab .email i {
+  font-size: 20px;
+}
+
+.cab .redes a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0px 10px;
+}
+
+nav {
+  background-color: #eeeeee;
+  z-index: 1000;
+  position: relative;
+  top: 20;
+  left: 0;
+  width: 100%;
+  padding: 10px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav #logoimg {
+  width: 80px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  margin-left: 50px;
+}
+
+nav span {
+  -webkit-transition: 300MS;
+  transition: 300MS;
+}
+
+nav span i {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  color: #121212a9;
+  font-size: 40px;
+  padding: 10px;
+}
+
+nav span i:hover {
+  cursor: pointer;
+}
+
+nav ul {
+  width: 0;
+  height: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  background: #eeeeee;
+  overflow: hidden;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+nav ul li .active {
+  color: #23d429;
+  border-bottom: #23d429 2px solid;
+  text-decoration: none !important;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #121212;
+  font-family: "Texto";
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, #000000a2), to(#0c0c0c90)), url("../medios/cabeceras/tutoriales.jpg");
+  background-image: linear-gradient(180deg, #000000a2 100%, #0c0c0c90 100%), url("../medios/cabeceras/tutoriales.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding-top: 150px;
+}
+
+header .text-hero {
+  text-align: center;
+  padding: 100px;
+}
+
+header .text-hero h2 {
+  font-family: "Titulos";
+  font-size: 100px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.tutoriales {
+  background-color: #ffffff;
+  padding: 25px 0px;
+}
+
+.tutoriales .tutos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tutoriales .tutos .video {
+  width: 45%;
+  margin-bottom: 20px;
+}
+
+.tutoriales .tutos .video h3 {
+  margin-bottom: 15px;
+  font-family: "Texto";
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.tutoriales .tutos .video h3 span {
+  color: #23d429;
+  font-weight: 900;
+}
+
+footer {
+  background-color: #eeeeee;
+  width: 100%;
+  padding: 25px 0px 0px 0px;
+}
+
+footer .container .foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .container .foot button:hover img {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+footer .container .foot button:hover p {
+  display: block;
+}
+
+footer .container .foot button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+  position: relative;
+}
+
+footer .container .foot button img {
+  width: 100%;
+}
+
+footer .container .foot button p {
+  position: absolute;
+  top: 30%;
+  color: #ffffff;
+  right: 20%;
+  display: none;
+  font-size: 20px;
+}
+
+footer .container .foot p {
+  font-size: 20px;
+  margin: 20px 0px;
+  color: #121212;
+  font-family: "Texto";
+}
+
+footer .container .foot a {
+  font-size: 25px;
+  text-decoration: none;
+  padding: 0px 10px;
+  color: #121212;
+}
+
+footer .container .foot a:hover {
+  color: #23d429;
+}
+
+footer .copy {
+  text-align: center;
+  width: 100%;
+  background-color: #cacaca;
+  font-size: 20px;
+  font-family: "Texto";
+  color: #121212;
+  margin-top: 25px;
+  padding: 15px;
+}
+
+@media screen and (max-width: 1025px) {
+  .cab {
+    padding: 5px 20px;
+  }
+  .cab .email {
+    width: 80%;
+  }
+  .cab .email p {
+    font-size: 18px;
+  }
+  .cab .email i {
+    font-size: 20px;
+  }
+  .cab .redes a {
+    font-size: 20px;
+    padding: 0px 10px;
+  }
+  nav {
+    padding: 10px 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav #logoimg {
+    width: 80px;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .cab {
+    padding: 5px 0px;
+  }
+  .cab .email {
+    width: 80%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .cab .email p {
+    font-size: 18px;
+  }
+  .cab .email i {
+    font-size: 20px;
+  }
+  .cab .redes a {
+    font-size: 20px;
+    padding: 0px 5px;
+  }
+  nav #logoimg {
+    width: 70px;
+  }
+  nav span i:hover {
+    cursor: pointer;
+  }
+  nav ul {
+    height: 70px;
+    padding-top: 10px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .tutoriales .tutos .video {
+    width: 90%;
+  }
+  .tutoriales .tutos .video iframe {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .espacio {
+    display: none;
+  }
+  .cab {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .cab .email {
+    width: 100%;
+    text-align: center;
+  }
+  .cab .email .correo {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .cab .email .horario {
+    text-align: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .cab .email p {
+    font-size: 13px;
+  }
+  .cab .email .i {
+    font-size: 18px;
+  }
+  .cab .redes {
+    width: 100%;
+    text-align: center;
+  }
+  .cab .redes a {
+    font-size: 18px;
+    padding: 0px 5px;
+  }
+  #header {
+    padding: 70px 0px !important;
+  }
+  .sticky {
+    position: fixed;
+    background: none;
+    top: 0;
+  }
+  nav {
+    background-color: #ffffff00;
+    top: 20;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    padding: 10px 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav #logoimg {
+    display: none;
+  }
+  nav span i {
+    position: absolute;
+    right: 0;
+    background-color: #eeeeee5e;
+    top: 0px;
+    color: #121212a9;
+    font-size: 30px;
+    padding: 10px;
+  }
+  nav span i:hover {
+    cursor: pointer;
+  }
+  nav ul {
+    height: 80vh;
+    padding-top: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header {
+    padding-top: 100px;
+  }
+  header .text-hero {
+    padding: 50px 0px;
+  }
+  header .text-hero h2 {
+    font-size: 50px;
+  }
+  .tutoriales .tutos .video {
+    width: 90%;
+  }
+  .tutoriales .tutos .video iframe {
+    height: 200px;
+  }
+  .tutoriales .tutos .video h3 {
+    font-size: 14px;
+  }
+  footer .container .foot button {
+    width: 30%;
+  }
+  footer .container .foot button p {
+    top: 25%;
+    right: 15%;
+    font-size: 15px;
+  }
+  footer .container .foot p {
+    font-size: 14px;
+  }
+  footer .container .foot a {
+    font-size: 20px;
+  }
+  footer .copy {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=tutoriales.css.map */
