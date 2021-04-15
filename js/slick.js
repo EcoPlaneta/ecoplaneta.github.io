@@ -1,7 +1,17 @@
-// galerias
-$('.galpamb').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-});
+window.onload = function(){
+    var padre = document.getElementById("contenedor_padre")
+    var contenedor = document.getElementById("contenedor_carga")
+    var imgcarg = document.getElementById("carga")
+    var cargimg = document.getElementById("imgcarga");
+    setTimeout(
+   ()=>{
+    contenedor.style.width = "0%";
+    imgcarg.style.left = "-500px";
+    } , 1000
+    );
+    setTimeout(
+   ()=>{
+    padre.style.width = "0%";
+    } , 1000
+    );
+}
